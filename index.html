@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html dir=ltr itemscope itemtype=http://schema.org/VisualArtwork lang=en>
+<head>
+    <meta charset=utf-8>
+    <meta itemprop=artMedium content=Website>
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+    <meta name=description content="Website + domain name, 2014. Click or tap to play.">
+    <meta name=theme-color content=#ccff11>
+    <meta name=viewport content="initial-scale=1.0,shrink-to-fit=no,width=device-width">
+    <meta property="fb:admins" content="509248955">
+    <meta property="og:image" content="https://adhdadhdadhd.com/apple-touch-icon-precomposed.png">
+    <meta property="og:title" content="ADHDADHDADHD">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adhdadhdadhd.com/">
+    <title itemprop=name>ADHDADHDADHD</title>
+    <link rel=apple-touch-icon-precomposed href=apple-touch-icon-precomposed.png>
+    <link rel=author href=https://alexanderchristiaanjacob.com/>
+    <link rel=canonical href=https://adhdadhdadhd.com/>
+    <link rel="shortcut icon" href=favicon.ico>
+    <style>
+        *{border:none;margin:0;outline:0;padding:0;text-decoration:none}
+        html{background:#cf1;overflow:hidden}
+        #start{font-size:50vmin;height:100%;height:100vh;line-height:1;line-height:100vh;text-align:center}
+    </style>
+    <script>
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-6227584-61', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body id=top>
+<audio id=sound1 preload=auto src=audio/ADHDADHDADHD.ogg></audio>
+<div id=start>▶</div>
+<canvas id=content role=main></canvas>
+<script>
+
+    function loadImages(sources, callback) {
+        images = {};
+        var loadedImages = 0;
+        var numImages = 0;
+        // get num of sources
+        for(var src in sources) {
+            numImages++;
+        }
+        for(var src in sources) {
+            images[src] = new Image();
+            images[src].onload = function() {
+                if(++loadedImages >= numImages) {
+                    callback(images);
+                }
+            };
+            images[src].src = sources[src];
+        }
+    }
+
+    var sources = {
+        a8000000: 'images/x5n1u0041c000000.png',
+        a8ccff11: 'images/x5n1u0041cccff11.png',
+        a8ffffff: 'images/x5n1u0041cffffff.png',
+        a48000000: 'images/x5n2u0041c000000.png',
+        a48ccff11: 'images/x5n2u0041cccff11.png',
+        a48ffffff: 'images/x5n2u0041cffffff.png',
+        a208000000: 'images/x5n3u0041c000000.png',
+        a208ccff11: 'images/x5n3u0041cccff11.png',
+        a208ffffff: 'images/x5n3u0041cffffff.png',
+        a1008000000: 'images/x5n4u0041c000000.png',
+        a1008ccff11: 'images/x5n4u0041cccff11.png',
+        a1008ffffff: 'images/x5n4u0041cffffff.png',
+        d8000000: 'images/x5n1u0044c000000.png',
+        d8ccff11: 'images/x5n1u0044cccff11.png',
+        d8ffffff: 'images/x5n1u0044cffffff.png',
+        d48000000: 'images/x5n2u0044c000000.png',
+        d48ccff11: 'images/x5n2u0044cccff11.png',
+        d48ffffff: 'images/x5n2u0044cffffff.png',
+        d208000000: 'images/x5n3u0044c000000.png',
+        d208ccff11: 'images/x5n3u0044cccff11.png',
+        d208ffffff: 'images/x5n3u0044cffffff.png',
+        d1008000000: 'images/x5n4u0044c000000.png',
+        d1008ccff11: 'images/x5n4u0044cccff11.png',
+        d1008ffffff: 'images/x5n4u0044cffffff.png',
+        h8000000: 'images/x5n1u0048c000000.png',
+        h8ccff11: 'images/x5n1u0048cccff11.png',
+        h8ffffff: 'images/x5n1u0048cffffff.png',
+        h48000000: 'images/x5n2u0048c000000.png',
+        h48ccff11: 'images/x5n2u0048cccff11.png',
+        h48ffffff: 'images/x5n2u0048cffffff.png',
+        h208000000: 'images/x5n3u0048c000000.png',
+        h208ccff11: 'images/x5n3u0048cccff11.png',
+        h208ffffff: 'images/x5n3u0048cffffff.png',
+        h1008000000: 'images/x5n4u0048c000000.png',
+        h1008ccff11: 'images/x5n4u0048cccff11.png',
+        h1008ffffff: 'images/x5n4u0048cffffff.png'
+    };
+
+    function draw()
+    {
+        var color = choose(colors);
+        c.fillStyle = color;
+        var colorsans = color.slice(1);
+        var d = choose(sizes) ;
+        var l = choose(chars);
+        var w = d;
+        var h = d;
+        var x = Math.round((Math.random() * (width + w) - w) / 8) * 8;
+        var y = Math.round((Math.random() * (height + h) - h) / 8) * 8;
+        var q = l + d + colorsans;
+
+        if(Math.random() > .125)
+        {
+            c.drawImage(images[q], x/ratio, y/ratio, w/ratio, h/ratio);
+        }
+        else
+        {
+            c.fillRect(x/ratio, y/ratio, w/ratio, h/ratio);
+        }
+    }
+
+    function animate(canvas, lastTime)
+    {
+        var date = new Date();
+        var time = date.getTime();
+        var timeDiff = time - lastTime;
+        lastTime = time;
+
+        /*if(!audio.paused && !audio.ended && 0 < audio.currentTime)
+        {
+            audio.stop();
+        }*/
+
+        if(audio.currentTime > 1)
+        {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        if(audio.currentTime == 0)
+        {
+            audio.play();
+        }
+
+
+        draw();
+
+        requestAnimFrame(function(){
+            animate(canvas, timeDiff);
+        });
+    }
+
+    window.onclick = function(){
+        var body = document.body;
+        var html = document.documentElement;
+        height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
+
+        audio = document.getElementById('sound1');
+
+        canvas = document.getElementById('content');
+        c = canvas.getContext('2d');
+
+
+        devicePixelRatio = window.devicePixelRatio || 1,
+            backingStoreRatio = c.webkitBackingStorePixelRatio ||
+                c.mozBackingStorePixelRatio ||
+                c.msBackingStorePixelRatio ||
+                c.oBackingStorePixelRatio ||
+                c.backingStorePixelRatio || 1,
+
+            ratio = devicePixelRatio / backingStoreRatio;
+
+        // Remove start button.
+        knop.parentNode.removeChild(knop);
+
+
+        canvas.width = width * ratio;
+        canvas.height = height * ratio;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+
+        c.scale(ratio, ratio);
+
+        colors = ['#ccff11', '#000000', '#ffffff'];
+        sizes = [8, 48, 208, 1008];
+        chars = ['a', 'd', 'h', 'd'];
+
+        loadImages(sources, function(images) {
+            //c.drawImage(images.darthVader, 100, 30, 200, 137);
+            //c.drawImage(images.yoda, 350, 55, 93, 104);
+        });
+
+
+        var date = new Date();
+        var time = date.getTime();
+        animate(time);
+    };
+
+
+    function choose(array)
+    {
+        return array[Math.floor(Math.random()*array.length)];
+    }
+
+    window.requestAnimFrame = (function(callback){
+        return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function(callback){
+                window.setTimeout(callback, 1000/24);
+            };
+    })();
+
+
+    window.onload = function(){
+        knop = document.getElementById("start");
+        knop.ontouchstart = window.onclick;
+    };
+
+</script>
+</body>
+</html>
