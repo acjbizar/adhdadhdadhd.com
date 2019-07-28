@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "version": "20190728",
+    "name": "ADHDADHDADHD",
+    "default_locale": "en",
+    "description": "Website + domain name, 2014. Click or tap to play.",
+    "author": "Alexander Christiaan Jacob",
+    "theme_color": "#ccff11",
+    "homepage_url": "https://adhdadhdadhd.com/",
+    "start_url": "https://adhdadhdadhd.com/",
+    "icons": [
+        {
+            "src": "https://adhdadhdadhd.com/apple-touch-icon-precomposed.png"
+        }
+    ],
+    "display": "fullscreen"
+}

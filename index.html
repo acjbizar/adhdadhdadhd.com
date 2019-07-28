@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html dir=ltr itemscope itemtype=http://schema.org/VisualArtwork lang=en>
+<html dir="ltr" lang="en">
 <head>
-    <meta charset=utf-8>
-    <meta itemprop=artMedium content=Website>
-    <meta name=apple-mobile-web-app-capable content=yes>
-    <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
-    <meta name=description content="Website + domain name, 2014. Click or tap to play.">
-    <meta name=theme-color content=#ccff11>
-    <meta name=viewport content="initial-scale=1.0,shrink-to-fit=no,width=device-width">
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Website + domain name, 2014. Click or tap to play.">
+    <meta name="theme-color" content="#ccff11">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ACJ">
+    <meta name="twitter:creator" content="@ACJ">
+    <meta name="viewport" content="initial-scale=1.0,shrink-to-fit=no,width=device-width">
     <meta property="fb:admins" content="509248955">
+    <meta property="og:description" content="Website + domain name, 2014. Click or tap to play.">
     <meta property="og:image" content="https://adhdadhdadhd.com/apple-touch-icon-precomposed.png">
     <meta property="og:title" content="ADHDADHDADHD">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adhdadhdadhd.com/">
-    <title itemprop=name>ADHDADHDADHD</title>
-    <link rel=apple-touch-icon-precomposed href=apple-touch-icon-precomposed.png>
-    <link rel=author href=https://alexanderchristiaanjacob.com/>
-    <link rel=canonical href=https://adhdadhdadhd.com/>
-    <link rel="shortcut icon" href=favicon.ico>
+    <title>ADHDADHDADHD</title>
+    <link rel="apple-touch-icon-precomposed" href="https://adhdadhdadhd.com/apple-touch-icon-precomposed.png">
+    <link rel="author" href="https://alexanderchristiaanjacob.com/" title="Alexander Christiaan Jacob">
+    <link rel="canonical" href="https://adhdadhdadhd.com/">
+    <link rel="help" href="https://github.com/acjbizar/adhdadhdadhd.com">
+    <link rel="manifest" href="https://adhdadhdadhd.com/manifest.json">
+    <link rel="shortcut icon" href="https://adhdadhdadhd.com/favicon.ico">
     <style>
         *{border:none;margin:0;outline:0;padding:0;text-decoration:none}
         html{background:#cf1;overflow:hidden}
@@ -34,11 +39,32 @@
         ga('send', 'pageview');
 
     </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "VisualArtwork",
+            "name": "ADHDADHDADHD",
+            "image": "https://adhdadhdadhd.com/apple-touch-icon-precomposed.png",
+            "description": "Website + domain name, 2014. Click or tap to play.",
+            "url": "https://adhdadhdadhd.com/",
+            "creator": [
+                {
+                    "@type": "Person",
+                    "name": "Alexander Christiaan Jacob",
+                    "url": "https://alexanderchristiaanjacob.com/",
+                    "sameAs": "https://twitter.com/acj"}
+            ],
+            "artform": "website",
+            "accessModeSufficient": "visual",
+            "interactivityType": "mixed"
+        }
+    </script>
 </head>
-<body id=top>
-<audio id=sound1 preload=auto src=audio/ADHDADHDADHD.ogg></audio>
-<div id=start>▶</div>
-<canvas id=content role=main></canvas>
+<body id="top">
+<audio id="sound1" preload="auto" src="audio/ADHDADHDADHD.ogg"></audio>
+<div id="start">▶</div>
+<noscript>Requires <i>JavaScript</i> support.</noscript>
+<canvas id="content" role="main">Requires <code>canvas</code> support.</canvas>
 <script>
 
     function loadImages(sources, callback) {
