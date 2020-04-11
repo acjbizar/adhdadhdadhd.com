@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="ltr" lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,8 +7,8 @@
     <meta name="description" content="Website + domain name, 2014. Click or tap to play.">
     <meta name="theme-color" content="#ccff11">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@ACJ">
     <meta name="twitter:creator" content="@ACJ">
+    <meta name="twitter:site" content="@ACJ">
     <meta name="viewport" content="initial-scale=1.0,shrink-to-fit=no,width=device-width">
     <meta property="fb:admins" content="509248955">
     <meta property="og:description" content="Website + domain name, 2014. Click or tap to play.">
@@ -171,7 +171,6 @@
             audio.play();
         }
 
-
         draw();
 
         requestAnimFrame(function(){
@@ -190,7 +189,6 @@
         canvas = document.getElementById('content');
         c = canvas.getContext('2d');
 
-
         devicePixelRatio = window.devicePixelRatio || 1,
             backingStoreRatio = c.webkitBackingStorePixelRatio ||
                 c.mozBackingStorePixelRatio ||
@@ -202,7 +200,6 @@
 
         // Remove start button.
         knop.parentNode.removeChild(knop);
-
 
         canvas.width = width * ratio;
         canvas.height = height * ratio;
