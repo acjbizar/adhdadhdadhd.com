@@ -56,15 +56,25 @@
 <canvas id="content" role="main">Requires <code>canvas</code> support.</canvas>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6227584-61"></script>
 <script>
+    "use strict";
+
+    var canvas;
+    var c;
+    var audio;
+    var height;
+    var width;
+    var backingStoreRatio;
+    var ratio;
+    var images = {};
+    var colors = ['#ccff11', '#000000', '#ffffff'];
+    var sizes = [8, 48, 208, 1008];
+    var chars = ['a', 'd', 'h', 'd'];
+    var knop;
 
     function loadImages(sources, callback) {
-        images = {};
         var loadedImages = 0;
-        var numImages = 0;
-        // get num of sources
-        for(var src in sources) {
-            numImages++;
-        }
+        var numImages = sources.length;
+
         for(var src in sources) {
             images[src] = new Image();
             images[src].onload = function() {
@@ -156,7 +166,7 @@
             audio.currentTime = 0;
         }
 
-        if(audio.currentTime == 0)
+        if(audio.currentTime === 0)
         {
             audio.play();
         }
@@ -198,15 +208,10 @@
 
         c.scale(ratio, ratio);
 
-        colors = ['#ccff11', '#000000', '#ffffff'];
-        sizes = [8, 48, 208, 1008];
-        chars = ['a', 'd', 'h', 'd'];
-
         loadImages(sources, function(images) {
             //c.drawImage(images.darthVader, 100, 30, 200, 137);
             //c.drawImage(images.yoda, 350, 55, 93, 104);
         });
-
 
         var date = new Date();
         var time = date.getTime();
