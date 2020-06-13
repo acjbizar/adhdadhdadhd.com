@@ -1,0 +1,14 @@
+{
+    "background_color": "black",
+    "description": "Website + domain name, 2014. Click or tap to play.",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "https://adhdadhdadhd.com/apple-touch-icon-precomposed.png"
+        }
+    ],
+    "lang": "nl",
+    "name": "ADHDADHDADHD",
+    "start_url": "https://adhdadhdadhd.com/",
+    "theme_color": "#ccff11"
+}

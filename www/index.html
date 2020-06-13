@@ -21,7 +21,7 @@
     <link rel="author" href="https://alexanderchristiaanjacob.com/" title="Alexander Christiaan Jacob">
     <link rel="canonical" href="https://adhdadhdadhd.com/">
     <link rel="help" href="https://github.com/acjbizar/adhdadhdadhd.com">
-    <link rel="manifest" href="https://adhdadhdadhd.com/manifest.json">
+    <link rel="manifest" href="https://adhdadhdadhd.com/manifest.webmanifest">
     <link rel="shortcut icon" href="https://adhdadhdadhd.com/favicon.ico">
     <style>
         *{border:none;margin:0;outline:0;padding:0;text-decoration:none}
@@ -189,14 +189,14 @@
         canvas = document.getElementById('content');
         c = canvas.getContext('2d');
 
-        devicePixelRatio = window.devicePixelRatio || 1,
-            backingStoreRatio = c.webkitBackingStorePixelRatio ||
-                c.mozBackingStorePixelRatio ||
-                c.msBackingStorePixelRatio ||
-                c.oBackingStorePixelRatio ||
-                c.backingStorePixelRatio || 1,
+        devicePixelRatio = window.devicePixelRatio || 1
+        backingStoreRatio = c.webkitBackingStorePixelRatio ||
+            c.mozBackingStorePixelRatio ||
+            c.msBackingStorePixelRatio ||
+            c.oBackingStorePixelRatio ||
+            c.backingStorePixelRatio || 1
 
-            ratio = devicePixelRatio / backingStoreRatio;
+        ratio = devicePixelRatio / backingStoreRatio;
 
         // Remove start button.
         knop.parentNode.removeChild(knop);
@@ -234,7 +234,6 @@
                 window.setTimeout(callback, 1000/24);
             };
     })();
-
 
     window.onload = function(){
         knop = document.getElementById("start");
