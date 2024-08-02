@@ -7,4 +7,3 @@ Animated Internet artwork from 2014.
 ## Inquiries
 
 * [Mimesia Gallery](https://mimesia.gallery/artworks/31)
-* [Patty Morgan](https://www.pattymorgan.net/w/iAPdnuusJiMem7RzE)
