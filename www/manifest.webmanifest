@@ -1,7 +1,8 @@
 {
+  "$schema": "https:\/\/json.schemastore.org\/web-manifest-combined.json",
   "background_color": "black",
   "description": "Website + domain name, 2014. Click or tap to play.",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "https://adhdadhdadhd.com/apple-touch-icon-precomposed.png",
@@ -15,6 +16,6 @@
   ],
   "lang": "nl",
   "name": "ADHDADHDADHD",
-  "start_url": "https://adhdadhdadhd.com/",
+  "start_url": ".",
   "theme_color": "#ccff11"
 }
